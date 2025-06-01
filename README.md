@@ -21,7 +21,7 @@
 
 ## 🧪 Live Demo
 
-> https://kufur.kax.one
+> https://kufur-generator.deno.dev/
 
 ## 🛠 How to Run Locally
 
