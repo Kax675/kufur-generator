@@ -6,12 +6,20 @@ import { predicates } from "./predicates.ts";
 type PredicateType = "orientation" | "status";
 
 function randomBetween(min: number, max: number): number {
-    const range = max - min + 1;
-    const randomBuffer = new Uint32Array(1);
-    crypto.getRandomValues(randomBuffer); // Uses browser or Deno native crypto
-    return min + (randomBuffer[0] % range);
-  }
-  
+  const range = max - min + 1;
+  const maxUint32 = 0xFFFFFFFF;
+  const acceptableMax = maxUint32 - (maxUint32 % range);
+
+  let randomNumber: number;
+  const buffer = new Uint32Array(1);
+
+  do {
+    crypto.getRandomValues(buffer);
+    randomNumber = buffer[0];
+  } while (randomNumber >= acceptableMax); // reject biased values
+
+  return min + (randomNumber % range);
+}
 
 function getSuffixedPredicate(input: string, predicateType: PredicateType): string {
   const hardVowels = ["a", "ı", "o", "u"];
