@@ -58,6 +58,6 @@ Rewritten with ❤️ by [Kax675](https://github.com/Kax675) using the modern De
 
 ## 📝 License
 
-BSD 3-Clause License - see [LICENSE](LICENSE) for more details.
+MPL-2.0 License - see [LICENSE](LICENSE) for more details.
 
 Happy deploying 🚀
