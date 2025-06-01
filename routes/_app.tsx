@@ -7,6 +7,12 @@ export default function App({ Component }: PageProps) {
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Kufur Generator</title>
         <link rel="stylesheet" href="/styles.css" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap"
+          rel="stylesheet"
+        />
       </head>
       <body>
         <Component />
@@ -14,8 +20,7 @@ export default function App({ Component }: PageProps) {
           <a href="https://github.com/Kax675/kufur-generator">
             Source
           </a>
-          |
-          Made with ❤️ by
+          | Made with ❤️ by
           <a href="https://github.com/Kax675">
             Kax675
           </a>
