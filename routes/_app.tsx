@@ -10,6 +10,16 @@ export default function App({ Component }: PageProps) {
       </head>
       <body>
         <Component />
+        <footer class="fixed flex items-center gap-1 justify-center bottom-0 left-0 right-0 p-4 text-center text-black/50 text-sm font-medium">
+          <a href="https://github.com/Kax675/kufur-generator">
+            Source
+          </a>
+          |
+          Made with ❤️ by
+          <a href="https://github.com/Kax675">
+            Kax675
+          </a>
+        </footer>
       </body>
     </html>
   );

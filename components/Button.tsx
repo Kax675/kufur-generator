@@ -42,6 +42,7 @@ export function Button(props: ButtonProps) {
         {...anchorProps}
         ref={buttonRef as Ref<HTMLAnchorElement>}
         class={className}
+        role="button"
         aria-disabled={!IS_BROWSER || props.disabled}
       />
     );
